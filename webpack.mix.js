@@ -13,8 +13,13 @@ let mix = require('laravel-mix');
 
 mix
 	.options({
-	  processCssUrls: false // Process/optimize relative stylesheet url()'s. Set to false, if you don't want them touched.
+	  processCssUrls: false, // Process/optimize relative stylesheet url()'s. Set to false, if you don't want them touched.
 	})
 	.copyDirectory('resources/assets/images', 'public/images')
 	.js('resources/assets/js/app.js', 'public/js')
-   	.sass('resources/assets/sass/app.scss', 'public/css');
+   	.sass('resources/assets/sass/app.scss', 'public/css', {
+   		// precision: 5,
+   		// outputStyle: 'compressed'
+   	})
+   	.copy('./node_modules/bootstrap-sass/assets/fonts/bootstrap/', 'public/fonts/bootstrap' )
+   	;

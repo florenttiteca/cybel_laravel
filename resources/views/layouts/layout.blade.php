@@ -16,10 +16,15 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
     <body>
-        @include('cybel.menu')            
-        <div id="app" class="content flex-center position-ref full-height">
+        <header>
+            @include('cybel.menu')  
+        </header>
+        <div id="app" class="content full-height">
             @yield('content')
         </div>
+        <footer>
+            @include('cybel.footer')
+        </footer>
     </body>
     <script src="{{ asset('js/app.js') }}"></script>
 </html>

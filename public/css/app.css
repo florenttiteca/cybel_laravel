@@ -300,8 +300,8 @@ th {
 
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("~bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.eot");
-  src: url("~bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("~bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("~bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("~bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("~bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+  src: url("./../fonts/bootstrap/glyphicons-halflings-regular.eot");
+  src: url("./../fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("./../fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("./../fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("./../fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("./../fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
 }
 
 .glyphicon {
@@ -7728,53 +7728,108 @@ html, body {
   margin: 0;
 }
 
-html .content, body .content {
-  background-image: url("./../images/cybel_facade_flou.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+html header, body header {
+  height: 50px;
+  color: #706b64;
+  font-size: 120%;
 }
 
-html .title, body .title {
-  color: #FF5930;
-}
-
-html .navbar-default, body .navbar-default {
+html header .navbar-default, body header .navbar-default {
   background-color: #31393d;
 }
 
-html .navbar-default .navbar-brand, body .navbar-default .navbar-brand {
+html header .navbar-default .navbar-brand, body header .navbar-default .navbar-brand {
+  height: 50px;
   font-size: 40px;
   color: #FF5930;
 }
 
-.full-height {
-  height: 100vh;
+html header .navbar-default.navbar-fixed-top, body header .navbar-default.navbar-fixed-top {
+  border: none;
 }
 
-.flex-center {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.position-ref {
-  position: relative;
-}
-
-.content {
+html header .navbar-default .navbar-nav li, body header .navbar-default .navbar-nav li {
+  min-width: 150px;
   text-align: center;
 }
 
-.title {
-  font-size: 84px;
+html header .navbar-default .navbar-nav li a, body header .navbar-default .navbar-nav li a {
+  color: white;
 }
 
-.m-b-md {
+html header .navbar-default .navbar-nav li a:hover, body header .navbar-default .navbar-nav li a:hover {
+  color: white;
+}
+
+@media (min-width: 992px) {
+  html header .navbar-default .navbar-nav li a:hover, body header .navbar-default .navbar-nav li a:hover {
+    border-top: 3px solid #FF5930;
+    padding-top: 11px;
+  }
+}
+
+html .full-height, body .full-height {
+  height: 100vh;
+}
+
+html .m-b-md, body .m-b-md {
   margin-bottom: 30px;
+}
+
+html .title, body .title {
+  font-size: 84px;
+  color: #FF5930;
+}
+
+html .content, body .content {
+  background-image: url("./../images/cybel_facade_flou.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  text-align: center;
+}
+
+html .content.full-height, body .content.full-height {
+  height: 100vh;
+}
+
+html .content .m-b-md, body .content .m-b-md {
+  margin-bottom: 30px;
+}
+
+html .content .title, body .content .title {
+  font-size: 84px;
+  color: #FF5930;
+}
+
+html .content .carousel-inner, body .content .carousel-inner {
+  height: 300px;
+}
+
+html .content .carousel-inner img, body .content .carousel-inner img {
+  width: 100%;
+}
+
+html footer, body footer {
+  text-align: center;
+  background-color: #FF5930;
+  color: #31393d;
+}
+
+html footer p, body footer p {
+  height: 250px;
+  margin: 0;
+  font-size: 1.2em;
+  color: white;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+html footer p .glyphicon, body footer p .glyphicon {
+  color: #31393d;
+  font-size: 2.5em;
+}
+
+html footer p strong, body footer p strong {
+  color: #31393d;
+  font-size: 1.2em;
 }
